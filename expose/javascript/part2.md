@@ -1,4 +1,5 @@
 1. Line 12 will print "3". `i` is the index variable for the for loop, which stops when `i >= prices.length()`. prices has 3 items in it, so i will incriment to 3 then exit. Since it is a `var` variable declaration, it will continue existing outside the for loop code block and thus can be printed by line 12.
+
 2. Line 13 will print "150". Since discountedPrice is a `var` variable, it will continue to exist past the for loop block and will contain the last value it was assigned. The last value it was assigned is `prices[2] * (1 - 0.5)` which is 300 * 0.5 = 150.
 3. Line 14 will print "150". It prints this since that was the last value assigned to `finalPrice` in the loop, on the third itteration where `i` = 2. `discountedPrice` = 150, and rounding 150 is still 150.
 4. This function will return an array reference from the function containing all the discounted values, so containing `[50, 100, 150]`. This is because arrays are returnable objects in JavaScript
@@ -15,3 +16,17 @@
 - C: student.greeting()
 - D: student["Favorite Teacher"].name
 - E: student.courseLoad[0]
+
+13:
+- A: `'32'`.  This is because the `+` opperator can be use mathmatically or to add strings together. If a string is present then the other value is also converted to its string represntation and concatinated.
+- B: `1`. This happens because `-` is a purely mathmatical symbol in JS, so it attempts to convert '3' to a number and evaluate the expression.
+- C: The answer is `3` because null is converted to a number, which is represented as zero in this context.
+- D: '3' + null is `'3null'` because of the presence of the string, null is also converted to a string and concatinated.
+- E: `4`. This happens because the + opperator tries to do a mathmatical addition and converts `true` to the value 1, so 3 + 1 = 4.
+- F: This is `0` because null and false are both converted to numbers, and are both zero in their numerical form. Thus, 0 + 0 = 0.
+- G: `3undefined`. Since '3' is a string, the `+` opperator will convert the other opperands to strings, resulting in the concatination of 'undefined' onto '3'.
+- H: `NaN` because the subtraction symbol turns both opperands to their mathmatical forms. '3' is 3, but undefined is NaN in math, so NaN + 3 is still NaN.
+
+14:
+- A: `true` since opperands of different types are converted to numbers for standard comparisions. '2' becomes 2, and 2 > 1 is a true statement.
+- B: `false`
