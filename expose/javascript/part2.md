@@ -9,3 +9,9 @@
 9. There will be an undefined variable error since `i` is out of scope. It is declared in the for loop but we are attempting to access it from the function body.
 10. Line 12 will print "3". Const values cannot be reassigned, but are allowed to be printed. `length` is in the same scope as the `console.log()` statement and is never reassigned after its initialization so theres no errors thrown.
 11. The function can still successfully return the array. The address assigned to the const array cannot be changed, but the contents can be directly indexed into and changed. What would not be allowed is assigning a new array to the variable, since that would change the reference value.
+12. 
+A: student.name
+B: student["Grad Year"]
+C: student.greeting()
+D: student["Favorite Teacher"].name
+E: student.courseLoad[0]
