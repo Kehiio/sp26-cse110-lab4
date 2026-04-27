@@ -6,6 +6,6 @@
 6. Similar to Q5, `let` is only defined within the scope of the code block, so since `discountedPrice` is defined inside the body of the for loop, it is no longer accessable in the print statement outside of the loop, line 13.
 7. It will print "150", which is the last value that was calculated and stored into the `finalPrice` value in the loop. The variable is declared inside the function body, and the `console.log()` statement is also in the function body, so the variable is still in scope and able to be printed.
 8. It will return a reference to the `discounted` array in memory, [50, 100, 150]. The array in memory isn't destroyed until the garbage collector removes it, so since another variable is holding a reference to the array it will continue to stay in memmory on the heap.
-9. s
-10. s
-11. s
+9. There will be an undefined variable error since `i` is out of scope. It is declared in the for loop but we are attempting to access it from the function body.
+10. Line 12 will print "3". Const values cannot be reassigned, but are allowed to be printed. `length` is in the same scope as the `console.log()` statement and is never reassigned after its initialization so theres no errors thrown.
+11. The function can still successfully return the array. The address assigned to the const array cannot be changed, but the contents can be directly indexed into and changed. What would not be allowed is assigning a new array to the variable, since that would change the reference value.
