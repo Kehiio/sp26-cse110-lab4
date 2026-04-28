@@ -29,4 +29,10 @@
 
 14:
 - A: `true` since opperands of different types are converted to numbers for standard comparisions. '2' becomes 2, and 2 > 1 is a true statement.
-- B: `false`
+- B: `false` since strings are compared character by character by dictionary order/lexographically. '2' is found after '1' lexographically, so the comparision stops there and is evaluated as false.
+- C: `true` because opperands with different types are converted to numbers for the `==` operator, and so '2' becomes 2, and 2 == 2 is true.
+- D: This evaluates as `false` because the `===` operand is the "strictly equal' symbol, where both opperands have to be of the same type and value to be evaluated as true. Since it is comparing a number and a string, which are different types, the evaluation is false.
+- E: `false` because the boolean value is converted to 1, and 1 does not equal 2.
+- F: This is `true` because the `Boolean()` function returns a boolean value depending on what was passed to the function. For numbers it will return `true` for any number orther than 0 or -0. `Boolean(2)` equals `true`, which is a boolean value like the left side of the expression, so the strict equality opperator compares the two values and returns true.
+
+15: The `==` operator will convert the types to try to evaluate the expression, while the `===` is a "strictly equal" sign, which will not do type conversion and only evaluates to true if the type and value of the two operands are the same.
