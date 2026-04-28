@@ -54,4 +54,4 @@
     `2`
     
 Where 1, 4, and 3 were printed instantly, and 2 printed one second after them. It looks like code execution continues past setTimeout,
-and so it printed 1 then printed 4. Then, the setTimeout with 0 ms of delay printed next, and finally 1000ms (1 second) after, 2 was printed.
+and so it printed 1 then printed 4. Then, the setTimeout with 0 ms of delay printed on the next cycle, and finally 1000ms (1 second) after, 2 was printed.
