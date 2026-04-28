@@ -17,7 +17,7 @@
 - D: student["Favorite Teacher"].name
 - E: student.courseLoad[0]
 
-13:
+13.
 - A: `'32'`.  This is because the `+` opperator can be use mathmatically or to add strings together. If a string is present then the other value is also converted to its string represntation and concatinated.
 - B: `1`. This happens because `-` is a purely mathmatical symbol in JS, so it attempts to convert '3' to a number and evaluate the expression.
 - C: The answer is `3` because null is converted to a number, which is represented as zero in this context.
@@ -27,7 +27,7 @@
 - G: `3undefined`. Since '3' is a string, the `+` opperator will convert the other opperands to strings, resulting in the concatination of 'undefined' onto '3'.
 - H: `NaN` because the subtraction symbol turns both opperands to their mathmatical forms. '3' is 3, but undefined is NaN in math, so NaN + 3 is still NaN.
 
-14:
+14.
 - A: `true` since opperands of different types are converted to numbers for standard comparisions. '2' becomes 2, and 2 > 1 is a true statement.
 - B: `false` since strings are compared character by character by dictionary order/lexographically. '2' is found after '1' lexographically, so the comparision stops there and is evaluated as false.
 - C: `true` because opperands with different types are converted to numbers for the `==` operator, and so '2' becomes 2, and 2 == 2 is true.
@@ -35,4 +35,23 @@
 - E: `false` because the boolean value is converted to 1, and 1 does not equal 2.
 - F: This is `true` because the `Boolean()` function returns a boolean value depending on what was passed to the function. For numbers it will return `true` for any number orther than 0 or -0. `Boolean(2)` equals `true`, which is a boolean value like the left side of the expression, so the strict equality opperator compares the two values and returns true.
 
-15: The `==` operator will convert the types to try to evaluate the expression, while the `===` is a "strictly equal" sign, which will not do type conversion and only evaluates to true if the type and value of the two operands are the same.
+15. The `==` operator will convert the types to try to evaluate the expression, while the `===` is a "strictly equal" sign, which will not do type conversion and only evaluates to true if the type and value of the two operands are the same.
+
+16. In code file.
+
+17. The function will return a new array containing the values [2, 4, 6]. the `modifyArray()` call is made with an array literal and the function doSomething. Inside of modifyArray, a new array is created in which the values of the parameter array are modified and pushed into the new array. In the line `newArr.push(callback(array[i]))` the value returned by the function `callback `'s result is the value which is being put into the new array. Callback was passed doSomething, which returns the number multiplied by 2, so the array values will be multiplied by 2 then pushed into newArr.
+
+18. In code file.
+
+19. The output is:
+
+    `1`
+    
+    `4`
+    
+    `3`
+    
+    `2`
+    
+Where 1, 4, and 3 were printed instantly, and 2 printed one second after them. It looks like code execution continues past setTimeout,
+and so it printed 1 then printed 4. Then, the setTimeout with 0 ms of delay printed next, and finally 1000ms (1 second) after, 2 was printed.
